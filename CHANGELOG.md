@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.6.0](https://github.com/ublue-os/main/compare/v1.5.0...v1.6.0) (2023-06-19)
+
+
+### Features
+
+* add some indonesian fonts ([#248](https://github.com/ublue-os/main/issues/248)) ([abfc70d](https://github.com/ublue-os/main/commit/abfc70d21cc9ea97b839564fe959587e0dbb7fef))
+* add wireguard-tools ([#241](https://github.com/ublue-os/main/issues/241)) ([44cb522](https://github.com/ublue-os/main/commit/44cb522091433b2e1e4a84f4bdac4ea592e353b0))
+
 ## [1.5.0](https://github.com/ublue-os/main/compare/v1.4.2...v1.5.0) (2023-05-31)
 
 
