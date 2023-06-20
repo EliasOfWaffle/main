@@ -19,8 +19,7 @@ fi
 wget -P /tmp/rpms \
     https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-${RELEASE}.noarch.rpm \
     https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-${RELEASE}.noarch.rpm
-    https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-tainted-${RELEASE}.noarch.rpm
-
+    
 rpm-ostree install \
     /tmp/rpms/*.rpm \
     fedora-repos-archive
@@ -32,7 +31,7 @@ for REPO in $(rpm -ql ublue-os-akmods-addons|grep ^"/etc"|grep repo$); do
 done
 
 rpm-ostree install /tmp/akmods-rpms/kmods/*.rpm
-
+rpm-ostree install rpmfusion-nonfree-release-tainted
 for REPO in $(rpm -ql ublue-os-akmods-addons|grep ^"/etc"|grep repo$); do
     echo "akmods: disable per defaults: ${REPO}"
     sed -i 's@enabled=1@enabled=0@g' ${REPO}
